@@ -46,14 +46,16 @@
             </exported-packages>
 
             <dependencies>
-                <used-by-source-modules>
-                    <module>java.base</module>
-                </used-by-source-modules>
+                <used-by-source-modules/>
             </dependencies>
 
             <source-packages>
                 <package>java_cup.runtime</package>
             </source-packages>
+
+            <used-by-sources-modules>
+                <module>java.base</module>
+            </used-by-sources-modules>
 
         </project>
 
