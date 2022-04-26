@@ -53,9 +53,9 @@
                 <package>java_cup.runtime</package>
             </source-packages>
 
-            <used-by-sources-modules>
+            <used-by-source-modules>
                 <module>java.base</module>
-            </used-by-sources-modules>
+            </used-by-source-modules>
 
         </project>
 
