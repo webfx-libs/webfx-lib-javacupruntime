@@ -1,1 +1,1 @@
-A WebFx port  (actually just GWT port) of the JavaCup runtime library.
+A WebFX port  (actually just GWT port) of the JavaCup runtime library.
