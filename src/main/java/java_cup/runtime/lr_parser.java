@@ -438,12 +438,14 @@ public abstract class lr_parser {
 	  return null;
   };
   protected void report_expected_token_ids(){
+      /* Useless message as symbl_name_from_id() is commented
 	  List<Integer> ids = expected_token_ids();
 	  LinkedList<String> list = new LinkedList<String>();
 	  for (Integer expected : ids){
 		  list.add(symbl_name_from_id(expected));
 	  }
 	  System.out.println("instead expected token classes are "+list);
+	  */
   }
   /**
    * Translates numerical symbol ids to the (non)terminal names from the spec
@@ -722,7 +724,7 @@ public abstract class lr_parser {
 	  else if (act == 0)
 	    {
 	      /* call user syntax error reporting routine */
-	      syntax_error(cur_token);
+	      //syntax_error(cur_token); // WebFX modif: commented, the message will be in exception instead if no recoverable
 
 	      /* try to error recover */
 	      if (!error_recovery(false))
@@ -733,6 +735,7 @@ public abstract class lr_parser {
 		  /* just in case that wasn't fatal enough, end parse */
 		  done_parsing();
 		} else {
+          syntax_error(cur_token); // WebFX modif: message printed here if recoverable
 		  lhs_sym = (Symbol)stack.peek();
 		}
 	    }
