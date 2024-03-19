@@ -1353,7 +1353,7 @@ public abstract class lr_parser {
   protected static short[][] unpackFromStrings(String[] sa)
     {
       // Concatanate initialization strings.
-      StringBuffer sb = new StringBuffer(sa[0]);
+      StringBuilder sb = new StringBuilder(sa[0]);
       for (int i=1; i<sa.length; i++)
 	sb.append(sa[i]);
       int n=0; // location in initialization string
