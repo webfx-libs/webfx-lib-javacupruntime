@@ -9,7 +9,7 @@ import java.util.Stack;
  *  original contents.  This data structure is used when the parse needs 
  *  to "parse ahead" to determine if a given error recovery attempt will 
  *  allow the parse to continue far enough to consider it successful.  Once 
- *  success or failure of parse ahead is determined the system then 
+ *  success or failure of parse ahead is determined, the system then
  *  reverts to the original parse stack (which has not actually been 
  *  modified).  Since parse ahead does not execute actions, only parse
  *  state is maintained on the virtual stack, not full Symbol objects.
@@ -90,7 +90,7 @@ public class virtual_parse_stack {
       real_next++;
 
       /* put the state number from the Symbol onto the virtual stack */
-      vstack.push(new Integer(stack_sym.parse_state));
+      vstack.push(stack_sym.parse_state);
     }
 
   /*. . . . . . . . . . . . . . . . . . . . . . . . . . . . . .*/
@@ -137,7 +137,7 @@ public class virtual_parse_stack {
   /** Push a state number onto the stack. */
   public void push(int state_num)
     {
-      vstack.push(new Integer(state_num));
+      vstack.push(state_num);
     }
 
   /*-----------------------------------------------------------*/
