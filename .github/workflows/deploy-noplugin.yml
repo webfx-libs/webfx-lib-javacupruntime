@@ -1,7 +1,6 @@
 name: Build and Deploy to Sonatype
 
 on:
-  push:
   workflow_dispatch:
 
 jobs:
