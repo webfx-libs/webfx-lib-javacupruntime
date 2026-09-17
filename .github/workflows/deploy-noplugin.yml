@@ -1,4 +1,4 @@
-name: Build and Deploy to Sonatype
+name: Build and Deploy to Sonatype (no WebFX plugin)
 
 on:
   workflow_dispatch:
